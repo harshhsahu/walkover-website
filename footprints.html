@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Footprints — The journeys of Walkover alumni</title>
+  <meta name="description" content="Everyone who walked with Walkover left a footprint. Walk the trail from 2009 to today and read the journeys of our alumni." />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="icon" type="image/png" href="/icons/walkover.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <canvas id="scene" aria-hidden="true"></canvas>
+
+  <aside class="side-card box" id="person-card" aria-live="polite" aria-hidden="true">
+    <button class="close" aria-label="Close">×</button>
+    <div class="person-body"></div>
+  </aside>
+
+  <main>
+    <section class="section" id="intro">
+      <div class="copy reveal">
+        <span class="eyebrow">Footprints</span>
+        <h1>Everyone who walked with us <span class="grad">left a mark.</span></h1>
+        <p class="lead">
+          Interns who became leaders. Engineers who became founders. Every lantern on this trail is a Spartan who
+          walked with Walkover — placed in the year they joined. Walk from 2009 to today and read their journeys.
+        </p>
+        <div class="cta-row"><a class="btn primary" href="#trail">Walk the trail ↓</a><a class="btn ghost" href="#add">Add your footprint</a></div>
+      </div>
+      <div class="stats reveal">
+        <div class="stat"><b data-count="0" id="s-total">0</b><span>journeys on the trail</span></div>
+        <div class="stat"><b data-count="0" id="s-founders">0</b><span>alumni who became founders</span></div>
+        <div class="stat"><b data-count="0" id="s-years">0</b><span>years of footprints</span></div>
+        <div class="stat"><b data-count="0" id="s-teams">0</b><span>teams represented</span></div>
+      </div>
+    </section>
+
+    <div class="trail" id="trail">
+      <div class="hud">
+        <div style="display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:flex-start">
+          <div class="year-big"><small>Walking through</small><span id="year">2009</span></div>
+          <div style="display:grid;gap:10px;justify-items:end">
+            <div class="filters" role="group" aria-label="Filter journeys"></div>
+          </div>
+        </div>
+        <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center">
+          <p class="muted" style="font-size:14px">Hover a lantern to see who it is · click to read the journey</p>
+          <span class="sample-note" data-sample>Sample journeys — real alumni stories coming soon</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="section" id="all">
+      <div class="copy reveal">
+        <span class="eyebrow">All journeys</span>
+        <h2>Every footprint,<br />in one place.</h2>
+        <p class="lead">The same stories, as a list. Use the filters on the trail to narrow them down.</p>
+      </div>
+      <div class="filters reveal" role="group" aria-label="Filter journeys" style="margin-top:24px"></div>
+      <div class="people" id="people"></div>
+    </section>
+
+    <section class="section" id="add">
+      <div class="copy reveal">
+        <span class="eyebrow">Walked with us?</span>
+        <h2>Add your <span class="grad">footprint.</span></h2>
+        <p class="lead">Tell us where the walk took you. The team reviews every story before it goes on the trail.</p>
+      </div>
+      <form class="stack-form box reveal" id="footprint-form" style="margin-top:28px" novalidate>
+        <div class="row">
+          <label>Your name<input name="name" required autocomplete="name" /></label>
+          <label>Role at Walkover<input name="role" required placeholder="e.g. Intern → Backend Engineer" /></label>
+        </div>
+        <div class="row">
+          <label>Year you joined<input name="joined" type="number" min="2009" max="2030" required placeholder="2016" /></label>
+          <label>Year you left <span class="opt">(optional)</span><input name="left" type="number" min="2009" max="2030" placeholder="2021" /></label>
+        </div>
+        <label>Where are you now?<input name="now" required placeholder="e.g. Founded my own startup" /></label>
+        <label>What did Walkover teach you?<textarea name="quote" rows="3" maxlength="300" required></textarea></label>
+        <label>LinkedIn <span class="opt">(optional)</span><input name="linkedin" type="url" placeholder="https://linkedin.com/in/…" /></label>
+        <label style="display:flex;gap:10px;align-items:flex-start;color:var(--ink)"><input type="checkbox" name="consent" required style="width:auto;margin-top:4px" /> I agree to Walkover showing my name and story on this page.</label>
+        <button class="btn primary" type="submit">Leave my footprint ✦</button>
+        <div class="form-done" hidden tabindex="-1">
+          <p><b>Your lantern is lit — on your screen.</b> Send it to the Walkover team so they can add it to the trail for everyone.</p>
+          <div class="cta-row"><a class="btn primary form-send" href="#">Send to Walkover →</a><button type="button" class="btn ghost form-reset">Add another</button></div>
+        </div>
+      </form>
+    </section>
+  </main>
+  <script type="module" src="/src/pages/footprints.js"></script>
+</body>
+</html>

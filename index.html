@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Walkover — Every world starts with one idea</title>
+  <meta name="description" content="Walkover is a visionary company from Indore building across communication, automation, AI, finance and design — and a place where anyone with an idea can experiment and build with us." />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="icon" type="image/png" href="/icons/walkover.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <canvas id="scene" aria-hidden="true"></canvas>
+
+  <nav class="rail" aria-label="Chapters">
+    <a href="#seed" data-ch="0">Seed</a>
+    <a href="#walk" data-ch="1">The Walk</a>
+    <a href="#lab" data-ch="2">The Lab</a>
+    <a href="#growth" data-ch="3">Growth</a>
+    <a href="#city" data-ch="4">The City</a>
+    <a href="#plot" data-ch="5">Your plot</a>
+  </nav>
+
+  <main>
+    <!-- 1 · THE SEED -->
+    <section id="seed" class="section" data-anchor data-ch="0">
+      <div class="copy reveal">
+        <span class="eyebrow">Walkover · Indore · Since 2009</span>
+        <h1>Every world starts with <span class="grad">one idea.</span></h1>
+        <p class="lead">
+          Walkover is a visionary company building across communication, automation, AI, finance and design —
+          and a place where students, makers and dreamers can experiment and build an extraordinary world with us.
+        </p>
+        <div class="cta-row">
+          <a href="#walk" class="btn primary">Start the walk ↓</a>
+          <a href="#plot" class="btn ghost">Plant your idea</a>
+        </div>
+      </div>
+      <div class="scroll-hint"><span></span>Scroll to walk</div>
+    </section>
+
+    <!-- 2 · THE WALK -->
+    <div id="walk" data-ch="1">
+      <section class="section right" data-anchor>
+        <div class="copy reveal">
+          <span class="eyebrow">The Walk</span>
+          <h2>Fifteen years,<br />one footprint at a time.</h2>
+          <div class="box milestone" data-m="0"></div>
+        </div>
+      </section>
+      <section class="section" data-anchor><div class="copy reveal"><div class="box milestone" data-m="1"></div></div></section>
+      <section class="section right" data-anchor><div class="copy reveal"><div class="box milestone" data-m="2"></div></div></section>
+      <section class="section" data-anchor><div class="copy reveal"><div class="box milestone" data-m="3"></div></div></section>
+      <section class="section right" data-anchor><div class="copy reveal"><div class="box milestone" data-m="4"></div></div></section>
+    </div>
+
+    <!-- 3 · THE LAB -->
+    <div id="lab" data-ch="2">
+      <section class="section" data-anchor>
+        <div class="copy reveal">
+          <span class="eyebrow">The Lab</span>
+          <h2>A workshop where ideas are <span class="grad">allowed to fail.</span></h2>
+          <p class="lead">
+            Every Walkover product began as an experiment on a bench like these — a messaging prototype, a few automation
+            flows, an AI agent. We test fast, keep what works and learn from what doesn't.
+          </p>
+        </div>
+      </section>
+      <section class="section" data-anchor>
+        <div class="copy reveal">
+          <span class="eyebrow">Reserved</span>
+          <h2>There's a bench<br />with your name on it.</h2>
+          <p class="lead">
+            Students, makers and early founders: bring an idea and build it with people who have shipped products
+            used by millions — with real infrastructure, real mentors and the freedom to experiment.
+          </p>
+          <div class="cta-row"><a class="btn primary" href="/lab.html">Inside the Lab →</a></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- 4 · GROWTH -->
+    <section id="growth" class="section right" data-anchor data-ch="3">
+      <div class="copy reveal">
+        <span class="eyebrow">Growth</span>
+        <h2>Good ideas<br /><span class="grad">grow roots.</span></h2>
+        <p class="lead">An experiment that finds real customers puts down roots — and roots grow into products, teams and whole domains.</p>
+      </div>
+      <div class="stats reveal">
+        <div class="stat"><b data-count="150">0</b><span>+ Spartans, working remotely</span></div>
+        <div class="stat"><b data-count="1">0</b><span>B+ SMS a month through MSG91</span></div>
+        <div class="stat"><b data-count="14">0</b><span>+ products, 9 domains</span></div>
+        <div class="stat"><b data-count="15">0</b><span>+ years of building</span></div>
+      </div>
+    </section>
+
+    <!-- 5 · THE CITY -->
+    <div id="city" data-ch="4">
+      <section class="section" data-anchor>
+        <div class="copy reveal">
+          <span class="eyebrow">The City</span>
+          <h2>And roots<br />become a city.</h2>
+          <p class="lead">Fourteen products. Nine domains. One Walkover. Hover a landmark to visit it.</p>
+          <div class="cta-row"><a class="btn ghost" href="/worlds.html">Explore the Worlds →</a></div>
+        </div>
+      </section>
+      <section class="section" data-anchor>
+        <div class="grid" id="product-grid"></div>
+      </section>
+    </div>
+
+    <!-- 6 · YOUR PLOT -->
+    <section id="plot" class="section" data-anchor data-ch="5">
+      <div class="copy reveal">
+        <span class="eyebrow">Your plot</span>
+        <h2>This plot is empty.<br /><span class="grad">For now.</span></h2>
+        <p class="lead">Tell us your idea. We'll plant it in the city — and if it's ready to grow, let's build it together.</p>
+      </div>
+      <div class="reveal" id="idea-slot" style="margin-top: 28px; width: 100%"></div>
+    </section>
+  </main>
+
+  <script type="module" src="/src/pages/home.js"></script>
+</body>
+</html>

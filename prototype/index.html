@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Walkover — A Journey to Innovation</title>
+  <meta name="description" content="Walkover is a visionary product company building across communication, automation, AI, finance and design — and an open door for every student and dreamer with an idea worth building." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <canvas id="scene" aria-hidden="true"></canvas>
+  <div id="labels" aria-hidden="true"></div>
+  <div class="tooltip" id="tooltip" role="status"></div>
+
+  <header class="nav">
+    <a href="#top" class="brand"><span class="brand-mark">W</span>walkover</a>
+    <nav>
+      <a href="#domains">Domains</a>
+      <a href="#vision">Vision</a>
+      <a href="#founder">Founder</a>
+      <a href="#culture">Culture</a>
+      <a href="#join" class="nav-cta">Bring your idea</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="top" class="panel hero">
+      <p class="eyebrow">Walkover · Indore, India · Since 2009</p>
+      <h1>A journey to<br /><span class="grad">innovation.</span></h1>
+      <p class="lead">
+        One visionary company. Many worlds — communication, automation, AI, finance and design.
+        And an open door for every student and dreamer with an idea worth building.
+      </p>
+      <div class="cta-row">
+        <a href="#domains" class="btn primary">Explore our universe</a>
+        <a href="#join" class="btn ghost">Bring your idea →</a>
+      </div>
+      <div class="scroll-hint"><span></span>Scroll to fly through</div>
+    </section>
+
+    <!-- STATS -->
+    <section class="panel stats-panel">
+      <div class="stats">
+        <div class="stat"><b data-count="150">0</b><span>+ Spartans, working remotely</span></div>
+        <div class="stat"><b data-count="1">0</b><span>B+ SMS a month through MSG91</span></div>
+        <div class="stat"><b data-count="7">0</b><span>+ products across 5 domains</span></div>
+        <div class="stat"><b data-count="15">0</b><span>+ years of building from Indore</span></div>
+      </div>
+    </section>
+
+    <!-- DOMAINS -->
+    <section id="domains" class="panel">
+      <p class="eyebrow">Our universe</p>
+      <h2>Every planet is a product.<br />Every orbit, a domain.</h2>
+      <p class="lead narrow">Hover the planets around you, or pick a world below. Each one started as a single idea inside Walkover.</p>
+      <div class="grid" id="product-grid"></div>
+    </section>
+
+    <!-- VISION -->
+    <section id="vision" class="panel">
+      <p class="eyebrow">The vision</p>
+      <h2>Have an idea?<br /><span class="grad">Make it a Walkover.</span></h2>
+      <p class="lead narrow">
+        Walkover isn't only a company — it's a launchpad. Students, makers and anyone holding an idea
+        can become part of Walkover: experiment freely, build with a team that has shipped products used
+        by millions, and shape an extraordinary world together.
+      </p>
+      <ol class="steps">
+        <li><span>01</span><h3>Imagine</h3><p>Bring the rough sketch. A problem you can't stop thinking about is enough to start.</p></li>
+        <li><span>02</span><h3>Experiment</h3><p>Prototype with real infrastructure — messaging, automation, AI — and real mentors beside you.</p></li>
+        <li><span>03</span><h3>Build</h3><p>Grow it into a product of its own orbit, the same way MSG91, viaSocket and GTWY AI did.</p></li>
+      </ol>
+    </section>
+
+    <!-- FOUNDER -->
+    <section id="founder" class="panel">
+      <div class="founder">
+        <div class="founder-orb" aria-hidden="true"><span>PA</span></div>
+        <div>
+          <p class="eyebrow">Guided by experience</p>
+          <h2>Pushpendra Agrawal</h2>
+          <p class="role">Founder · Walkover, MSG91 &amp; viaSocket</p>
+          <p class="lead">
+            For more than fifteen years Pushpendra has been starting, building and scaling technology companies.
+            He founded MSG91 in 2009 as an SMS platform and landed its first Fortune-500 client by 2011 — today it
+            moves over a billion messages a month. An MBA from IMT Dubai, he now spends his days on agentic AI,
+            automation and the infrastructure that lets small teams build big things.
+          </p>
+          <ul class="tags">
+            <li>CPaaS &amp; communications</li><li>Agentic AI</li><li>Startup scaling</li><li>Infrastructure &amp; DevOps</li>
+          </ul>
+          <a class="btn ghost" href="https://in.linkedin.com/in/pushpendraa" target="_blank" rel="noopener">Connect on LinkedIn ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CULTURE -->
+    <section id="culture" class="panel">
+      <p class="eyebrow">How we build</p>
+      <h2>“The way you do anything<br />is the way you do everything.”</h2>
+      <div class="pillars">
+        <div><h3>Design</h3><p>Simplicity first. If it needs a manual, it isn't done yet.</p></div>
+        <div><h3>Culture</h3><p>Happy, hearty &amp; healthy — 150+ Spartans working remotely, owning what they ship.</p></div>
+        <div><h3>Technology</h3><p>Developers, designers, innovators — building communication and AI from the ground up.</p></div>
+      </div>
+    </section>
+
+    <!-- JOIN -->
+    <section id="join" class="panel join">
+      <p class="eyebrow">Your orbit is waiting</p>
+      <h2>Let's build an<br /><span class="grad">extraordinary world</span> together.</h2>
+      <p class="lead narrow">Student, founder, engineer or dreamer — tell us what you want to create.</p>
+      <div class="cta-row center">
+        <a class="btn primary" href="mailto:info@walkover.in?subject=I%20have%20an%20idea%20for%20Walkover">Pitch your idea</a>
+        <a class="btn ghost" href="tel:+917312560056">+91 731 256 0056</a>
+      </div>
+      <address>
+        Walkover Web Solutions Pvt. Ltd. · 5th Floor, Wing B, LIC Tower, Scheme No. 54, Indore, MP 452011<br />
+        Calls Mon–Fri, 10 AM – 8 PM
+      </address>
+    </section>
+  </main>
+
+  <footer>
+    <span>© <span id="year"></span> Walkover Web Solutions Pvt. Ltd.</span>
+    <a href="https://walkover.in" target="_blank" rel="noopener">walkover.in ↗</a>
+  </footer>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
